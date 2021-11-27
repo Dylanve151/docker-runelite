@@ -1,7 +1,7 @@
-# docker-scheduledwol
+# docker-webrunelite
 deploy:
 ```
-docker build --name="Scheduled-WOL" --restart="always" --volume="/etc/localtime:/etc/localtime:ro" --network="host"  dylanve115/scheduledwol
+docker build --name="webrunelite" --restart="always" --volume="/etc/localtime:/etc/localtime:ro" --network="host"  dylanve115/webrunelite
 ```
 ## Environment variables:
 ### Required:
