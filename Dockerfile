@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
   xvfb
 RUN mkdir /verbs
 VOLUME ["/root/.runelite"]
+VOLUME ["/root/jagexcache"]
 WORKDIR /root
 ENV PASSWORD 1234
 COPY startup.sh .
