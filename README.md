@@ -4,7 +4,7 @@ simple noVNC with runelite
 
 deploy:
 ```
-docker build --name="runelite" --restart="always" --volume="/etc/localtime:/etc/localtime:ro" --network="host"  dylanve115/runelite
+docker build --name="runelite" --restart="always" dylanve115/runelite
 ```
 ## Environment variables:
 ### Required:
