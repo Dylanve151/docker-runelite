@@ -12,7 +12,7 @@ VOLUME ["/root/jagexcache"]
 WORKDIR /root
 ENV PASSWORD 1234
 COPY startup.sh .
-RUN	mkdir ~/.vnc
+RUN mkdir ~/.vnc
 RUN wget https://github.com/runelite/launcher/releases/latest/download/RuneLite.jar
 RUN openssl req -x509 -nodes -newkey rsa:3072 -keyout novnc.pem -out novnc.pem -days 3650 -subj '/CN=localhost/O=Corp/C=EU'
 RUN chmod 755 *.sh
