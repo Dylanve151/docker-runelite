@@ -11,6 +11,7 @@ VOLUME ["/root/.runelite"]
 VOLUME ["/root/jagexcache"]
 WORKDIR /root
 ENV PASSWORD 1234
+ENV SCREENSIZE 1048x504x24
 COPY startup.sh .
 RUN mkdir /root/.vnc
 RUN wget https://github.com/runelite/launcher/releases/latest/download/RuneLite.jar
