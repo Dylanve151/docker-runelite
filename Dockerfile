@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
   novnc \
   python3-websockify \
   x11vnc \
+  xdotool \
   xvfb
 RUN mkdir /verbs
 VOLUME ["/root/.runelite"]
