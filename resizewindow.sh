@@ -27,4 +27,5 @@ do
         sleep 2
         echo "Window loaded. Resizing..."
         xdotool windowsize $n 100% 100%
+        xdotool windowmove $n 0 0
 done
