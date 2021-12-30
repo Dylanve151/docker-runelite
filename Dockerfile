@@ -20,5 +20,5 @@ RUN openssl req -x509 -nodes -newkey rsa:3072 -keyout novnc.pem -out novnc.pem -
 RUN ln /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 RUN chmod 755 *.sh
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-EXPOSE 6080
+EXPOSE 6080/tcp
 CMD [ "/root/startup.sh" ]
