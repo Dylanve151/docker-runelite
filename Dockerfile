@@ -14,6 +14,7 @@ WORKDIR /root
 ENV PASSWORD 1234
 ENV SCREENSIZE 1048x504x24
 COPY startup.sh .
+COPY launch.sh .
 RUN mkdir /root/.vnc
 RUN wget https://github.com/runelite/launcher/releases/latest/download/RuneLite.jar
 RUN openssl req -x509 -nodes -newkey rsa:3072 -keyout novnc.pem -out novnc.pem -days 3650 -subj '/CN=localhost/O=Corp/C=EU'
