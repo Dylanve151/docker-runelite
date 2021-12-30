@@ -1,3 +1,5 @@
+#!/bin/bash
+#resize window script
 
 export DISPLAY=:20
 
