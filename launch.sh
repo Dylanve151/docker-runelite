@@ -13,7 +13,7 @@ do
         curpid=$(xdotool search --pid $(pidof java))
 done
 
-echo "loadpid: $loadpid"
+echo "load window id: $loadpid"
 
 until [[ $curpid != *$loadpid* ]]
 do
@@ -22,11 +22,11 @@ do
         curpid=$(xdotool search --pid $(pidof java))
 done
 
+echo "Window loaded. Resizing..."
 sleep 2
 
 for n in $(xdotool search --pid $(pidof java))
 do
-        echo "Window loaded. Resizing..."
         xdotool windowsize $n 100% 100%
         xdotool windowmove $n 0 0
 done
