@@ -22,9 +22,10 @@ do
         curpid=$(xdotool search --pid $(pidof java))
 done
 
+sleep 2
+
 for n in $(xdotool search --pid $(pidof java))
 do
-        sleep 2
         echo "Window loaded. Resizing..."
         xdotool windowsize $n 100% 100%
         xdotool windowmove $n 0 0
