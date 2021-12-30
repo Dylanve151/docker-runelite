@@ -17,7 +17,7 @@ echo "loadpid: $loadpid"
 
 until [[ $curpid != *$loadpid* ]]
 do
-        echo "window not loaded"
+        echo "Window not loaded"
         sleep .5
         curpid=$(xdotool search --pid $(pidof java))
 done
@@ -25,6 +25,6 @@ done
 for n in $(xdotool search --pid $(pidof java))
 do
         sleep 2
-        echo "window loaded. resizing"
+        echo "Window loaded. Resizing..."
         xdotool windowsize $n 100% 100%
 done
