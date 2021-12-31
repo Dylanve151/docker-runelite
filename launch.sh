@@ -5,28 +5,23 @@ export DISPLAY=:20
 
 java -jar RuneLite.jar
 
-loadpid=$(xdotool search --pid $(pidof java))
-
-until [[ ! -z "$loadpid" ]]
+until [[ ! -z "$loadid" ]]
 do
-        loadpid=$(xdotool search --pid $(pidof java))
-        curpid=$(xdotool search --pid $(pidof java))
+        loadid=$(xdotool search --onlyvisible --name Runelite)
+        sleep 0.5
 done
 
-echo "load window id: $loadpid"
-
-until [[ $curpid != *$loadpid* ]]
+until [[ ! -z "$windowid" ]] && [[ $windowid != $loadid ]]
 do
-        echo "Window not loaded"
-        sleep .5
-        curpid=$(xdotool search --pid $(pidof java))
+        windowid=$(xdotool search --onlyvisible --name Runelite)
+        sleep 0.5
 done
 
-echo "Window loaded. Resizing..."
+echo "load window id: $loadid"
+echo "Window id: $windowid"
+echo "Resizing..."
+
 sleep 2
 
-for n in $(xdotool search --pid $(pidof java))
-do
-        xdotool windowsize $n 100% 100%
-        xdotool windowmove $n 0 0
-done
+xdotool windowsize $windowid 100% 100%
+xdotool windowmove $windowid 0 0
