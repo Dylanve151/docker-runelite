@@ -12,6 +12,6 @@ fi
 websockify -D --web=/usr/share/novnc/ --cert=/root/novnc.pem 6080 localhost:5900
 Xvfb :20 -screen 0 $SCREENSIZE &
 
-./launch.sh &
+./launch-rl.sh &
 
 x11vnc -forever -shared -usepw -display :20
