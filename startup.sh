@@ -1,12 +1,14 @@
 #!/bin/bash
 #startup script
 
+DISP=${DISPLAY:1}
+
 if [ ! -f "/root/.vnc/passwd" ]; then
     x11vnc -storepasswd $PASSWORD /root/.vnc/passwd
 fi
 
-if [ -f "/tmp/.X*" ]; then 
-   rm /tmp/.X20-lock -f
+if [ -f "/tmp/.X$DISP-lock" ]; then 
+   rm /tmp/.X$DISP-lock -f
 fi
 
 websockify -D --web=/usr/share/novnc/ --cert=/root/novnc.pem 6080 localhost:5900
