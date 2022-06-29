@@ -17,4 +17,4 @@ sleep 1s
 
 ./start-rl.sh &
 
-x11vnc -forever -shared -usepw -display :20
+x11vnc -forever -shared -usepw -display $DISPLAY
