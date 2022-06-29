@@ -17,6 +17,7 @@ DISPLAY = (By default :20) Doesn't do mutch. This is just so the variable is set
 
 ## Issues that I know:
 Sometimes doesnt boot. Just start it again.
+
 cant login on runelite client. Just open the docker console and install a web browser.
 ```
 apt-get update && apt-get install -y firefox-esr && firefox-esr
