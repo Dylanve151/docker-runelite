@@ -18,7 +18,7 @@ DISPLAY = (By default :20) Changes display number. No need to ever change this.
 ## Issues that I know:
 ### Sometimes doesnt boot:
 
-Just start it again.
+Just start it again until it keeps running. not sure why it does this.
 
 ### The login link doesnt work when logging into runelite: 
 
