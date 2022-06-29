@@ -13,7 +13,7 @@ PASSWORD = VNC Password
 SCREENSIZE = (By default: 1280x800x24) Screen resolution of virtual screen.
 Size of Runelite window cant be changed in runelite settings.
 
-DISPLAY = (By default :20) Doesn't do mutch. This is just so the variable is set in the docker terminal.
+DISPLAY = (By default :20) Changes display number. No need to ever change this.
 
 ## Issues that I know:
 ### Sometimes doesnt boot:
