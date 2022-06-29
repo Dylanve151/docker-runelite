@@ -1,8 +1,6 @@
 #!/bin/bash
 #Launch RuneLite and maximize window
 
-export DISPLAY=:20
-
 java -jar RuneLite.jar
 
 until [[ ! -z "$loadid" ]]
