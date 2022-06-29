@@ -1,9 +1,7 @@
 #!/bin/bash
 #Launch RuneLite and maximize window
 
-if [ $DISPLAY != ":20" ]; then
-        export DISPLAY=:20
-fi
+export DISPLAY=:20
 
 java -jar RuneLite.jar
 
