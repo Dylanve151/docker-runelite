@@ -10,7 +10,7 @@ if [ -f "/tmp/.X20-lock" ]; then
 fi
 
 websockify -D --web=/usr/share/novnc/ --cert=/root/novnc.pem 6080 localhost:5900
-Xvfb :20 -screen 0 $SCREENSIZE &
+Xvfb $DISPLAY -screen 0 $SCREENSIZE &
 
 #need some time to statup the virtual screen
 sleep 1s
