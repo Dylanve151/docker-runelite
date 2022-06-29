@@ -5,7 +5,7 @@ if [ ! -f "/root/.vnc/passwd" ]; then
     x11vnc -storepasswd $PASSWORD /root/.vnc/passwd
 fi
 
-if [ -f "/tmp/.X20-lock" ]; then 
+if [ -f "/tmp/.X*" ]; then 
    rm /tmp/.X20-lock -f
 fi
 
