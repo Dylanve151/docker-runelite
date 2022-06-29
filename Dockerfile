@@ -12,7 +12,7 @@ VOLUME ["/root/.runelite"]
 VOLUME ["/root/jagexcache"]
 WORKDIR /root
 ENV PASSWORD 1234
-ENV SCREENSIZE 1048x504x24
+ENV SCREENSIZE 1280x800x24
 ENV DISPLAY :20
 COPY startup.sh .
 COPY start-rl.sh .
