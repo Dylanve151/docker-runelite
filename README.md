@@ -1,6 +1,6 @@
 # docker-runelite
 
-simple noVNC with runelite
+simple noVNC with runelite. Uses port 6080 for http.
 
 deploy:
 ```
