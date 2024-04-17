@@ -1,7 +1,12 @@
 #!/bin/bash
 #Launch RuneLite and maximize window
 
-java -jar RuneLite.jar
+if [ $JAGEX_ACC == "True" ]
+then
+        flatpak run com.adamcake.Bolt
+else
+        flatpak flatpak run net.runelite.RuneLite
+fi
 
 until [[ ! -z "$loadid" ]]
 do
